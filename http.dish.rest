@@ -1,0 +1,48 @@
+### create a new dish
+POST http://localhost:7787/api/dishes/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "Test Dish123",
+  "description" : "Test Dish2",
+  "price" : "100",
+  "category" : "65759b3800864ab315b47d66"
+  
+} 
+
+#  {
+#   "name" : "Pulao",
+#   "description" : "Traditional Bengali Dish with Misti Doi",
+#   "price" : "100",
+#   "category" : "6575e3d2eb2b8be89e87c019",
+#   "photo": {
+#     "data": "",
+#     "type":"image/jpg"
+#   }
+  
+# }
+
+
+### get all the dishes
+GET http://localhost:7787/api/dishes
+Accept: application/json
+
+### get dish by id
+GET http://localhost:7787/api/dishes/6575d4a8f30363a54bc127cc
+Accept: application/json
+
+### get photo
+GET http://localhost:7787/api/dishes/6575d4a8f30363a54bc127cc/photo
+Accept: image/jpeg
+
+
+### find a dish by category
+POST http://localhost:7787/api/dishes/category/_search
+Content-Type: application/json
+Accept: application/json
+
+{
+  "categories": ["60df02fbd677d20015f3286f", "60dde63263642564088454a2"]
+}
+
